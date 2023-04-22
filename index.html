@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Food Order App</title>
+        <!-- bootstrap css -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <!-- customer input field -->
+        <table class="table table-bordered" id="order">
+            <th colspan="2">Customer Details</th>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" value="" id="customer_name"></td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td><input type="text" name="" id="customer_mobile"></td>
+            </tr>
+            <th colspan="2">Order Item</th>
+            <tr>
+                <td>
+                    <input type="radio" name="orderitem" id="burger" value="Burger">Burger
+                    <img src="assets/images/burger.jpg" alt="Burger" width="300px" height="200px">
+                    <p>Price : 150 Tk/=</p>
+                </td>
+                <td>
+                    <input type="radio" name="orderitem" id="sandwitch" value="Sandwitch">Sandwitch
+                    <img src="assets/images/sandwich.jpg" alt="Sandwitch" width="300px" height="200px">
+                    <p>Price : 150 Tk/=</p>
+                </td>
+            </tr>
+            <th colspan="2">Addone Item</th>
+            <tr>
+                <td>
+                    <input type="checkbox" name="addoneitem" id="drinks" value="Drinks">Drinks
+                    <img src="assets/images/drinks.jpg" alt="drinks" width="300px" height="200px">
+                    <p>Price : 80 Tk/=</p>
+                </td>
+                <td>
+                    <input type="checkbox" name="addoneitem" id="milkshake" value="Milkshake">Milkshake
+                    <img src="assets/images/milkshake.jpg" alt="milkshake" width="300px" height="200px">
+                    <p>Price : 100 Tk/=</p>
+                </td>
+            </tr>
+            <th colspan="2"><input type="button" value="Place Order" onclick="placeOrder()"></th>
+        </table>
+        <!-- customer slip -->
+        <table class="table table-striped" id="printorder">
+            <th colspan="2">Customer Slip</th>
+            <tr>
+                <td>Customer Name</td>
+                <td id="name_data"></td>
+            </tr>
+            <tr>
+                <td>Customer Mobile</td>
+                <td id="mobile_data"></td>
+            </tr>
+            <tr>
+                <td>Order Item</td>
+                <td id="orderitem_data"></td>
+            </tr>
+            <tr>
+                <td>Addone Item</td>
+                <td id="addoneitem_data"></td>
+            </tr>
+            <tr>
+                <td>Total Cost</td>
+                <td id="cost_data"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" class="btn btn-outline-success" onclick="window.print()">Print Order</button>
+                </td>
+            </tr>
+        </table>
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- javascript -->
+        <script src="assets/js/myScript.js"></script>
+    </body>
+</html>
